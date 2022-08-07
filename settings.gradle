@@ -1,0 +1,5 @@
+rootProject.name = 'labs'
+
+include 'lab-concurrency'
+include 'lab-io'
+

@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'tech.ineb'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 17
+
+apply from: "$rootDir/deps.gradle"
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 17
+
+    dependencies {
+        implementation libraries.log4jCore
+        implementation libraries.log4jApi
+
+        compileOnly libraries.lombook
+        annotationProcessor libraries.lombook
+
+        testCompileOnly libraries.lombook
+        testAnnotationProcessor libraries.lombook
+
+        testImplementation libraries.junit
+    }
+}
+
+dependencies {
+    testImplementation libraries.junit
+}

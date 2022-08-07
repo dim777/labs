@@ -1,0 +1,17 @@
+buildscript {
+    ext {
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+    }
+}
+
+
+group = 'ru.ineb'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
